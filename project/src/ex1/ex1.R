@@ -11,9 +11,7 @@ data |>
   ggplot() +
   geom_point(aes(GDP, HCI, color = Continent)) +
   scale_x_log10() +
-  geom_text(data = subset(data, Country %in% countries),
-            aes(x = GDP, y = HCI, label = Country),
-            color = "black") +
-  labs(title = paste("Human Capital Index vs GDP per capita"),
-      x = "GDP per capita",
-      y = "Human Capital Index")
+  geom_text(data = subset(data, Country %in% countries), aes(x = GDP, y = HCI, label = Country),
+    color = "black") +
+  labs(title = paste("Human Capital Index vs GDP per capita"), x = "GDP per capita", 
+    y = "Human Capital Index")

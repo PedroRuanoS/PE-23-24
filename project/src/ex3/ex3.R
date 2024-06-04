@@ -24,7 +24,8 @@ combined_data$Date <- as.Date(paste(combined_data$YEAR, combined_data$MONTH, "01
 ggplot(combined_data, aes(x = Date, y = share, color = COUNTRY, group = COUNTRY)) +
   geom_line() +
   geom_point() +
-  labs(x = "Date", y = "Share (%)", color = "Country", title = "Evolution of monthly Renewable Energy share") +
+  labs(x = "Date", y = "Share (%)", color = "Country", 
+    title = "Evolution of monthly Renewable Energy share") +
   scale_y_continuous(limits = c(0, 100)) +
   theme_minimal()
 
